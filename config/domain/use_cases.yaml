@@ -1,0 +1,12 @@
+services:
+  Inbenta\Application\UseCase\Chat\SendMessage:
+    public: true
+    arguments:
+      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\SendMessage'
+      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetActors'
+      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetMovies'
+
+  Inbenta\Application\UseCase\Chat\GetConversation:
+    public: true
+    arguments:
+      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetConversation'

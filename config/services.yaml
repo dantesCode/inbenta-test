@@ -1,0 +1,14 @@
+imports:
+    - { resource: "domain/" }
+
+services:
+    _defaults:
+        autowire: true
+        public: true
+        autoconfigure: true
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    Inbenta\Infrastructure\Symfony\Http\:
+        resource: '../src/Infrastructure/Symfony/Http/*'
+        tags: [ 'controller.service_arguments' ]
