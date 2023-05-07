@@ -22,7 +22,7 @@ class GetConversation
             $messages = $conversation->getMessages();
 
             foreach ($messages as $message) {
-                $conversationMessages[] = [$message->getWho(), $message->getText()];
+                $conversationMessages[] = ['who' => $message->getWho(), 'text' => $message->getText()];
             }
         }
 
