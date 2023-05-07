@@ -4,8 +4,8 @@ namespace Inbenta\Infrastructure\Service\Inbenta\Chat;
 
 use Exception;
 use GuzzleHttp\Client;
-use Inbenta\Infrastructure\Model\Inbenta\Request\Request;
-use Inbenta\Infrastructure\Model\Inbenta\Request\RequestFactory;
+use Inbenta\Infrastructure\Model\Inbenta\Request;
+use Inbenta\Infrastructure\Model\Inbenta\RequestFactory;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 

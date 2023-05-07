@@ -1,6 +1,6 @@
 <?php
 
-namespace Inbenta\Infrastructure\Model\Inbenta\Request;
+namespace Inbenta\Infrastructure\Model\Inbenta;
 
 class Request
 {

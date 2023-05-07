@@ -1,6 +1,6 @@
 <?php
 
-namespace Inbenta\Infrastructure\Model\Inbenta\Request;
+namespace Inbenta\Infrastructure\Model\Inbenta;
 
 use Inbenta\Infrastructure\Service\Inbenta\Authentication\Token;
 use Inbenta\Infrastructure\Service\Inbenta\URL\Chatbot;

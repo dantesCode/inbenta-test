@@ -1,0 +1,6 @@
+services:
+  Inbenta\Domain\Repository\ConversationRepository:
+    public: true
+    class: Inbenta\Infrastructure\Repository\Cache\ConversationRepository
+    arguments:
+      - '@Symfony\Component\HttpFoundation\RequestStack'

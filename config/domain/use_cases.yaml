@@ -5,8 +5,10 @@ services:
       - '@Inbenta\Infrastructure\Service\Inbenta\Chat\SendMessage'
       - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetActors'
       - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetMovies'
+      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\NewSession'
+      - '@Inbenta\Domain\Repository\ConversationRepository'
 
   Inbenta\Application\UseCase\Chat\GetConversation:
     public: true
     arguments:
-      - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetConversation'
+      - '@Inbenta\Domain\Repository\ConversationRepository'

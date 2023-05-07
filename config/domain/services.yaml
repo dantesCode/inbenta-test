@@ -20,14 +20,14 @@ services:
         public: true
         class: Inbenta\Infrastructure\Service\Inbenta\Chat\NewSession
         arguments:
-            - '@Inbenta\Infrastructure\Model\Inbenta\Request\RequestFactory'
+            - '@Inbenta\Infrastructure\Model\Inbenta\RequestFactory'
             - '@Symfony\Component\HttpFoundation\RequestStack'
             - '%env(INBENTA_API_KEY)%'
         autowire: true
 
-    Inbenta\Infrastructure\Model\Inbenta\Request\RequestFactory:
+    Inbenta\Infrastructure\Model\Inbenta\RequestFactory:
         public: true
-        class: Inbenta\Infrastructure\Model\Inbenta\Request\RequestFactory
+        class: Inbenta\Infrastructure\Model\Inbenta\RequestFactory
         arguments:
             - '@Inbenta\Infrastructure\Service\Inbenta\Authentication\Token'
             - '@Inbenta\Infrastructure\Service\Inbenta\URL\Chatbot'
@@ -38,7 +38,7 @@ services:
         public: true
         class: Inbenta\Infrastructure\Service\Inbenta\Chat\GetConversation
         arguments:
-            - '@Symfony\Component\HttpFoundation\RequestStack'
+            - '@Inbenta\Domain\Repository\ConversationRepository'
         autowire: true
 
     Inbenta\Infrastructure\Service\Inbenta\Chat\GetSessionToken:
@@ -52,10 +52,8 @@ services:
         public: true
         class: Inbenta\Infrastructure\Service\Inbenta\Chat\SendMessage
         arguments:
-            - '@Inbenta\Infrastructure\Model\Inbenta\Request\RequestFactory'
-            - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetConversation'
+            - '@Inbenta\Infrastructure\Model\Inbenta\RequestFactory'
             - '@Inbenta\Infrastructure\Service\Inbenta\Chat\GetSessionToken'
-            - '@Symfony\Component\HttpFoundation\RequestStack'
             - '%env(INBENTA_API_KEY)%'
         autowire: true
 
