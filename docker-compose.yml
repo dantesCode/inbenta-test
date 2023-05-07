@@ -6,7 +6,13 @@ services:
         build:
             context: ./.docker
             dockerfile: Dockerfile
+        tty: true
         ports:
             - "80:80"
         volumes:
             - .:/var/www/html
+        networks:
+            - inbenta-test-network
+networks:
+    inbenta-test-network:
+        driver: bridge
